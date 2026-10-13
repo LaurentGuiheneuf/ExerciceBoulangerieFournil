@@ -1,0 +1,87 @@
+header{
+    box-sizing: border-box;
+}
+:root{
+    --creme: #f5efe5;
+    --brun: #4b2e22;
+    --dore: #d4a94d;
+    --texte: #2a211d;
+}
+body{
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    background-color: var(--creme);
+    color: var(--texte);
+    margin: 0;
+}
+h1,h2{
+    color: var(--brun);
+    font-family: 'Georgia', serif;
+}
+
+h2{
+    border-bottom: 2px solid var(--dore);
+}
+nav a {
+    color: #222;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background-color: var(--dore);
+}
+
+nav a:focus-visible {
+    outline: 3px solid var(--dore);
+outline-offset: 1px;
+}
+
+figure{
+    text-align: center;
+}
+
+#produits-phares{
+    padding: 1.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    background-color:white;
+}
+footer{
+    background-color: var(--brun);
+    color: var(--creme);
+    text-align: center;
+    padding: 1rem;
+}
+h1{
+    background-color: var(--brun);
+    color: var(--creme);
+    padding: 1rem;
+}
+table{
+    width: 25%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+caption{
+    background-color: white;
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-align: center;
+    padding:5px;
+}
+table,td,tr,th{
+    background-color: var(--dore);
+    border-collapse: collapse;
+    padding:5px;
+    margin-bottom: 1rem;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#liste-pains{
+    display:flex;
+    flex-direction: row;
+    text-align: center;
+}
