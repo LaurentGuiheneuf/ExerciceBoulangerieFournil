@@ -1,6 +1,6 @@
-header{
-    box-sizing: border-box;
-}
+/* règles du Box-sizing*/ 
+*; *::before, *::after{box-sizing: border-box;}
+
 :root{
     --creme: #f5efe5;
     --brun: #4b2e22;
@@ -59,6 +59,8 @@ h1{
     color: var(--creme);
     padding: 1rem;
 }
+
+/*Gestion des tableaux*/
 table{
     width: 25%;
     margin: 0 auto;
