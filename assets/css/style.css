@@ -80,7 +80,7 @@ footer{
     padding: 1rem;
 }
 
-/*Gestion des tableaux*/
+/*-------------Gestion des tableaux-----------------*/
 table{
     width: 25%;
     margin: 0 auto;
@@ -106,15 +106,25 @@ table,td,tr,th{
     text-align: center;
 }
 
-#savoirs-faire img{border-radius: 15px;}
+#savoirs-faire {
+    margin: 10px;
+}
 
+#savoirs-faire img{
+    border-radius: 15px;
+}
+
+/*---------------Galerie Photos -----------------*/
 .galerie{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
 }
+p{
+    margin: 10px;
+}
 .galerie figure{
-    margin:0;
+    margin: 10px;;
     position: relative;
 }
 
