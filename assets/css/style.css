@@ -1,5 +1,5 @@
 /* règles du Box-sizing*/ 
-*; *::before, *::after{box-sizing: border-box;}
+*, *::before, *::after{box-sizing: border-box;}
 
 :root{
     --creme: #f5efe5;
@@ -8,58 +8,58 @@
     --texte: #2a211d;
 }
 body{
-    font-family: 'Georgia', serif;
+    font-family: "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
     background-color: var(--creme);
     color: var(--texte);
     margin: 0;
 }
-h1,h2{
-    color: var(--brun);
+/*-----------Header----------*/
+h1,h2,h3{
+    background-color: var(--brun);
+    color: var(--creme);
+    padding: 1rem;
     font-family: 'Georgia', serif;
 }
 
 h2{
-    border-bottom: 2px solid var(--dore);
+    border-bottom: 3px solid var(--dore);
+    padding-bottom: 3rem;
 }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fff; /* obligatoire : sinon le contenu défile visible derrière */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+
 
 /*------ Navigation -----*/
-nav a {
-    color: var(--creme);
-    text-decoration: none;
-    list-style: none;
-}
-
-nav a:hover,
-nav a:focus-visible {
+nav ul li a:hover, nav ul li a:focus-visible {
     background-color: var(--dore);
 }
 
-nav a:focus-visible {
+nav ul li a:focus-visible {
     outline: 3px solid var(--dore);
     outline-offset: 1px;
 }
 
 nav ul {
     list-style : none;
-    text-decoration: none;
     padding :0;
     margin : 0;
     display : flex;
-    gap : 1 rem;
     justify-content: space-around;
+    gap : 1rem;    
 }
 
 .menu li a {
-    color : var(--brun);
-    text-decoration: : none;
-    padding : 0.5rem 1 rem;
-    margin : 0;
-}
-
-nav li {
-    align-items: center;
+    color:var(--brun);
     text-decoration: none;
+    padding : 0.5rem 1rem;
+    border-radius : 4px;
 }
 
 figure{
@@ -79,30 +79,23 @@ footer{
     text-align: center;
     padding: 1rem;
 }
-h1{
-    background-color: var(--brun);
-    color: var(--creme);
-    padding: 1rem;
-}
 
 /*Gestion des tableaux*/
 table{
     width: 25%;
     margin: 0 auto;
     margin-bottom: 10px;
+    border-collapse: collapse;
 }
 caption{
     background-color: white;
-    border-collapse: collapse;
     border: 1px solid black;
     text-align: center;
     padding:5px;
 }
 table,td,tr,th{
     background-color: var(--dore);
-    border-collapse: collapse;
     padding:5px;
-    margin-bottom: 1rem;
     border: 1px solid black;
     text-align: center;
 }
@@ -113,9 +106,11 @@ table,td,tr,th{
     text-align: center;
 }
 
+#savoirs-faire img{border-radius: 15px;}
+
 .galerie{
     display: grid;
-    grid-template-columns: repeat(auto-fit minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
 }
 .galerie figure{
@@ -133,4 +128,45 @@ table,td,tr,th{
 
 .galerie figure:first-child{
     grid-column: span 2;
+}
+
+.photo{
+    position: relative;
+    display: inline-block;
+    margin: 0;
+}
+.photo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 10px;
+  background: #e63946;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 999px;
+  pointer-events: none; /* le clic traverse le badge vers l'image/lien */
+}
+
+/*-------------footer-------------*/
+#infos-pratiques {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes de largeur égale */
+  gap: 24px;
+  text-align: center;
+}
+
+#infos-pratiques address {
+  font-style: normal; /* le navigateur applique l'italique par défaut */
+}
+
+#infos-pratiques p {
+  margin: 0;
 }
