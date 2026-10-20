@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <title>Contacts - LeFournil</title>    
+</head>
+<body>
+ <!--Entête de Page -->   
+    <header>
+        <h1 style="text-align: center;">Le Fournil - Contact</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="../index.html">Accueil</a></li>                
+                <li><a href="./carte.html">Carte</a></li>                
+                <li><a href="./Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <h2>Contactez-nous</h2>
+    <p>N'hésitez pas à nous laisser un message</p>
+    <form action="#" method="post">
+         <fieldset>
+            <legend>Vos coordonnées</legend>
+            <p>
+            <label for="nom">Nom *</label>
+            <input type="text" id="nom" name="nom" autocomplete="name" required>
+            </p>
+            <p>
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            </p>
+            <p>
+            <label for="tel">Téléphone</label>
+            <input type="tel" id="tel" name="tel" autocomplete="tel"
+                    pattern="0[1-9]([ .]?[0-9]{2}){4}" title="Format : 06 12 34 56 78">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Votre commande</legend>
+            <p>
+            <label for="produit">Produit</label>
+            <select id="produit" name="produit" required>
+                <option value="">— Choisir —</option>
+                <option value="tradition">Tradition</option>
+                <option value="cereales">Céréales</option>
+                <option value="brioche">Brioche</option>
+                <option value="campagne">Pain de campagne</option>
+            </select>
+            </p>
+
+            <p>
+            <label for="qte">Quantité</label>
+            <input type="number" id="qte" name="qte" min="1" max="20" value="1">
+            </p>
+
+            <p>
+            <label for="date">Date de retrait *</label>
+            <input type="date" id="date" name="date" required>
+            </p>
+
+            <p>
+            <input type="radio" id="magasin" name="retrait" value="magasin" checked>
+            <label for="magasin">En magasin</label>
+            <input type="radio" id="livraison" name="retrait" value="livraison">
+            <label for="livraison">Livraison</label>
+            </p>
+
+            <p>
+            <label for="msg">Message</label>
+            <textarea id="msg" name="msg" rows="4" maxlength="300"></textarea>
+            </p>
+        </fieldset>
+
+        <p>
+            <input type="checkbox" id="cgv" name="cgv" required>
+            <label for="cgv">J'accepte les conditions de précommande *</label>
+        </p>
+        <button type="submit">Envoyer la précommande></button>
+
+    </form>
+    <br/>
+</main>
+<footer>
+    <section id="infos-pratiques">
+        <address>Adresse : 123 rue Jules Verne à 44600 Saint-Nazaire</address>
+        <p>Horaires : du lundi au dimanche : 7h - 20h</p>
+        <p>Téléphone : 02 40 01 02 03</p>
+    </section>
+    </footer>
+</html>

@@ -1,0 +1,202 @@
+/* règles du Box-sizing*/ 
+*, *::before, *::after{box-sizing: border-box;}
+
+:root{
+    --creme: #f5efe5;
+    --brun: #4b2e22;
+    --dore: #d4a94d;
+    --texte: #2a211d;
+}
+
+body{
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--creme);
+    color: var(--texte);
+    margin: 5px;
+}
+
+/*-----------Header----------*/
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fff; /* obligatoire : sinon le contenu défile visible derrière */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+h1,h2,h3{
+    background-color: var(--brun);
+    color: var(--creme);
+    padding: 1rem;
+    font-family: 'Georgia', serif;
+}
+
+h2{
+    border-bottom: 5px solid var(--dore);
+    padding-bottom: 2rem;
+}
+
+/*------ Navigation -----*/
+nav ul li a:hover, nav ul li a:focus-visible {
+    background-color: var(--dore);
+}
+
+nav ul li a:focus-visible {
+    outline: 3px solid var(--dore);
+    outline-offset: 1px;
+}
+
+nav ul {
+    list-style : none;
+    padding :0;
+    margin : 0;
+    display : flex;
+    justify-content: space-around;
+    align-items: center;
+    gap : 1rem;    
+}
+
+.menu li a {
+    color:var(--brun);
+    text-decoration: none;
+    padding : 0.5rem 1rem;
+    border-radius : 4px;
+}
+
+figure{
+    text-align: center;
+}
+
+#savoirs-faire {
+    margin-bottom: 10px;
+}
+
+#savoirs-faire img{
+    border-radius: 15px;
+}
+
+#savoirs-faire a{
+    margin:10px;
+}
+
+#produits-phares{
+    border: 1px solid black;
+    margin-bottom: 1rem;
+    background-color:white;
+}
+
+#produits-phares h3{
+    border-radius: 8px;
+    margin: 10px;
+}
+
+
+
+/*---------------Galerie Photos -----------------*/
+.galerie{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+p{
+    margin: 10px;
+}
+
+.galerie figure{
+    margin: 10px;;
+    position: relative;
+}
+
+.galerie figure img{
+    width:100%;
+    height:200px;
+    object-fit: cover;
+    display:block;
+    border-radius: 8px;
+}
+
+.galerie figure:first-child{
+    grid-column: span 2;
+}
+
+.photo{
+    position: relative;
+    display: inline-block;
+    margin: 0;
+}
+
+.photo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 10px;
+  background: #e63946;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 999px;
+  pointer-events: none; /* le clic traverse le badge vers l'image/lien */
+}
+
+footer{
+    background-color: var(--brun);
+    color: var(--creme);
+    text-align: center;
+    padding: 1rem;
+}
+
+#infos-pratiques {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes de largeur égale */
+  gap: 24px;
+  text-align: center;
+}
+
+#infos-pratiques address {
+  font-style: normal; /* le navigateur applique l'italique par défaut */
+}
+
+#infos-pratiques p {
+  margin: 0;
+}
+
+/*-------------Spécifique Carte-------------*/
+#tableau-prix{
+    width: 25%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    border-collapse: collapse;
+}
+
+caption{
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+    padding:5px;
+}
+
+table,td,tr,th{
+    background-color: var(--dore);
+    padding:5px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#liste-pains{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    list-style: none;
+    gap:100px;
+    margin-bottom: 50px;
+}
