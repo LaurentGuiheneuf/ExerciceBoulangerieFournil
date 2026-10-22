@@ -1,3 +1,23 @@
+@media screen and (min-width: 576px){
+    .galerie{
+
+    grid-template-columns: (repeat (2,1fr);
+    }
+    .galerie figure{
+        height: :300px;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .galerie{
+
+    grid-template-columns: (repeat 3,1fr);
+    }
+    .galerie figure{
+        height: :300px;
+    }
+}
+
 /* règles du Box-sizing*/ 
 *, *::before, *::after{box-sizing: border-box;}
 
